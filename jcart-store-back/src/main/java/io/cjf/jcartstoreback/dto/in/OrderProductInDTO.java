@@ -19,4 +19,5 @@ public class OrderProductInDTO {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
 }

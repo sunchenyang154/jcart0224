@@ -1,7 +1,7 @@
 package io.cjf.jcartstoreback.vo;
 
 public class OrderProductVO {
-    private Integer ProductId;
+    private Integer productId;
     private String productCode;
     private String productName;
     private Integer quantity;
@@ -11,27 +11,11 @@ public class OrderProductVO {
     private Integer totalRewordPoints;
 
     public Integer getProductId() {
-        return ProductId;
+        return productId;
     }
 
     public void setProductId(Integer productId) {
-        ProductId = productId;
-    }
-
-    public String getProductCode() {
-        return productCode;
-    }
-
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
+        this.productId = productId;
     }
 
     public Integer getQuantity() {
@@ -72,5 +56,21 @@ public class OrderProductVO {
 
     public void setTotalRewordPoints(Integer totalRewordPoints) {
         this.totalRewordPoints = totalRewordPoints;
+    }
+
+    public String getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }

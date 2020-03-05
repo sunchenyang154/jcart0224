@@ -18,28 +18,12 @@ public class OrderCheckoutInDTO {
         this.shipMethod = shipMethod;
     }
 
-    public Integer getShipAddressId() {
-        return shipAddressId;
-    }
-
-    public void setShipAddressId(Integer shipAddressId) {
-        this.shipAddressId = shipAddressId;
-    }
-
     public Short getPayMethod() {
         return payMethod;
     }
 
     public void setPayMethod(Short payMethod) {
         this.payMethod = payMethod;
-    }
-
-    public Integer getInvoiceAddressId() {
-        return invoiceAddressId;
-    }
-
-    public void setInvoiceAddressId(Integer invoiceAddressId) {
-        this.invoiceAddressId = invoiceAddressId;
     }
 
     public String getComment() {
@@ -56,5 +40,21 @@ public class OrderCheckoutInDTO {
 
     public void setOrderProducts(List<OrderProductInDTO> orderProducts) {
         this.orderProducts = orderProducts;
+    }
+
+    public Integer getShipAddressId() {
+        return shipAddressId;
+    }
+
+    public void setShipAddressId(Integer shipAddressId) {
+        this.shipAddressId = shipAddressId;
+    }
+
+    public Integer getInvoiceAddressId() {
+        return invoiceAddressId;
+    }
+
+    public void setInvoiceAddressId(Integer invoiceAddressId) {
+        this.invoiceAddressId = invoiceAddressId;
     }
 }

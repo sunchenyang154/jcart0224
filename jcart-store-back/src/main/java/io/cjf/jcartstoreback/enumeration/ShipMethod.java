@@ -1,6 +1,6 @@
 package io.cjf.jcartstoreback.enumeration;
 
-public enum  ShipMethod {
+public enum ShipMethod {
     EMS,
     SF,
     YT,
