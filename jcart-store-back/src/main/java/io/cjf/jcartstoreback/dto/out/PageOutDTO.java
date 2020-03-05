@@ -36,7 +36,7 @@ public class PageOutDTO<T> {
         return total;
     }
 
-    public void setTotal(long total) {
+    public void setTotal(Long total) {
         this.total = total;
     }
 }

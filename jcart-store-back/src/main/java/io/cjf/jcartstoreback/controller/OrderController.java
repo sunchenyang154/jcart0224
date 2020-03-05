@@ -5,20 +5,29 @@ import io.cjf.jcartstoreback.dto.out.OrderListOutDTO;
 import io.cjf.jcartstoreback.dto.out.OrderShowOutDTO;
 import io.cjf.jcartstoreback.dto.out.PageOutDTO;
 import io.cjf.jcartstoreback.dto.out.ProductShowOutDTO;
+import io.cjf.jcartstoreback.po.Order;
+import io.cjf.jcartstoreback.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/order")
 public class OrderController {
 
+    @Autowired
+    private OrderService orderService;
+
     @PostMapping("/checkout")
-    public Integer checkout(@RequestBody OrderCheckoutInDTO orderCheckoutInDTO,
+    public Long checkout(@RequestBody OrderCheckoutInDTO orderCheckoutInDTO,
                             @RequestAttribute Integer customerId){
-        return null;
+        Long orderId = orderService.checkout(orderCheckoutInDTO, customerId);
+
+        return orderId;
     }
 
     @GetMapping("/getList")
-    public PageOutDTO<OrderListOutDTO> getList(@RequestAttribute Integer customerId){
+    public PageOutDTO<OrderListOutDTO> getList(@RequestParam(required = false,defaultValue ="1") Integer pageNum,
+                                                 @RequestAttribute Integer customerId){
         return null;
     }
 
