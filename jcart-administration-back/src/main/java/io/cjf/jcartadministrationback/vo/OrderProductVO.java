@@ -1,12 +1,14 @@
-package io.cjf.jcartadministrationback.dto.out;
+package io.cjf.jcartadministrationback.vo;
 
-public class OrderProductShowOutDTO {
+public class OrderProductVO {
     private Integer productId;
     private String productCode;
     private String productName;
     private Integer quantity;
     private Double unitPrice;
+    private Double totalPrice;
     private Integer unitRewordPoints;
+    private Integer totalRewordPoints;
 
     public Integer getProductId() {
         return productId;
@@ -14,22 +16,6 @@ public class OrderProductShowOutDTO {
 
     public void setProductId(Integer productId) {
         this.productId = productId;
-    }
-
-    public String getProductCode() {
-        return productCode;
-    }
-
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
     }
 
     public Integer getQuantity() {
@@ -48,11 +34,43 @@ public class OrderProductShowOutDTO {
         this.unitPrice = unitPrice;
     }
 
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
     public Integer getUnitRewordPoints() {
         return unitRewordPoints;
     }
 
     public void setUnitRewordPoints(Integer unitRewordPoints) {
         this.unitRewordPoints = unitRewordPoints;
+    }
+
+    public Integer getTotalRewordPoints() {
+        return totalRewordPoints;
+    }
+
+    public void setTotalRewordPoints(Integer totalRewordPoints) {
+        this.totalRewordPoints = totalRewordPoints;
+    }
+
+    public String getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }
