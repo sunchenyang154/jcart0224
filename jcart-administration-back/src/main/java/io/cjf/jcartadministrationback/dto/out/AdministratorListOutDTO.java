@@ -23,14 +23,6 @@ public class AdministratorListOutDTO {
         this.username = username;
     }
 
-    public String getRealName() {
-        return realName;
-    }
-
-    public void setRealName(String realName) {
-        this.realName = realName;
-    }
-
     public Byte getStatus() {
         return status;
     }
@@ -45,5 +37,13 @@ public class AdministratorListOutDTO {
 
     public void setCreateTimestamp(Long createTimestamp) {
         this.createTimestamp = createTimestamp;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
     }
 }

@@ -20,7 +20,7 @@
     <include refid="Base_Column_List" />
     from jcart_administrator
     where administrator_id = #{administratorId,jdbcType=INTEGER}
-</select>
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from jcart_administrator
     where administrator_id = #{administratorId,jdbcType=INTEGER}
@@ -133,8 +133,8 @@
     delete from jcart_administrator
     where administrator_id in
     <foreach item="item" index="index" collection="administratorIds"
-            open="(" separator="," close=")">
-    #{item}
+             open="(" separator="," close=")">
+      #{item}
     </foreach>
   </delete>
 

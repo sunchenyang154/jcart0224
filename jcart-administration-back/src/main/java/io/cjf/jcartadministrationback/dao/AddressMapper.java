@@ -20,7 +20,7 @@ public interface AddressMapper {
 
     int updateByPrimaryKey(Address record);
 
-//  custom
+//    custom
 
     List<Address> selectByCustomerId(@Param("customerId") Integer customerId);
 

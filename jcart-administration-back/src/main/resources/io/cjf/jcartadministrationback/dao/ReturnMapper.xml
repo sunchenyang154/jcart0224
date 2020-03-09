@@ -233,10 +233,11 @@
     where return_id = #{returnId,jdbcType=INTEGER}
   </update>
 
-<!--custom -->
+<!--  custom-->
   <select id="search" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from jcart_return
+    order by create_time desc
   </select>
 </mapper>

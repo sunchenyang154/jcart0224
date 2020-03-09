@@ -38,14 +38,6 @@ public class OrderShowOutDTO {
         this.customerId = customerId;
     }
 
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
     public Byte getStatus() {
         return status;
     }
@@ -142,6 +134,13 @@ public class OrderShowOutDTO {
         this.comment = comment;
     }
 
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
 
     public List<OrderProductVO> getOrderProducts() {
         return orderProducts;

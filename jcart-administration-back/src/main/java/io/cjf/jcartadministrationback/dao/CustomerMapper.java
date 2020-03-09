@@ -18,7 +18,8 @@ public interface CustomerMapper {
 
     int updateByPrimaryKey(Customer record);
 
-//  customer
+//    custom
 
     Page<Customer> search();
+
 }

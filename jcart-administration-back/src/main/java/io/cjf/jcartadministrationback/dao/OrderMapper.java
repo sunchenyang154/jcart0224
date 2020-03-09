@@ -19,7 +19,7 @@ public interface OrderMapper {
 
     int updateByPrimaryKey(Order record);
 
-//  custom
+//    custom
 
     Page<OrderListOutDTO> search();
 

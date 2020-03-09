@@ -34,14 +34,6 @@ public class OrderListOutDTO {
         this.customerName = customerName;
     }
 
-    public Double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(Double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
     public Long getCreateTimestamp() {
         return this.createTime == null ? null : this.createTime.getTime();
     }
@@ -80,5 +72,13 @@ public class OrderListOutDTO {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

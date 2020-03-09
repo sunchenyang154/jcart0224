@@ -2,6 +2,7 @@ package io.cjf.jcartadministrationback.dao;
 
 import com.github.pagehelper.Page;
 import io.cjf.jcartadministrationback.po.Administrator;
+import org.apache.catalina.LifecycleState;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -25,7 +26,7 @@ public interface AdministratorMapper {
 
     Administrator selectByUsername(@Param("username") String username);
 
-    int batchDelete(@Param("administratorIds")List<Integer> administratorIds);
+    int batchDelete(@Param("administratorIds") List<Integer> administratorIds);
 
     Page<Administrator> selectList();
 

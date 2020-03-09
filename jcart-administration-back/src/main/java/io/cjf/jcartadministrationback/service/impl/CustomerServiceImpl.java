@@ -13,11 +13,11 @@ import org.springframework.stereotype.Service;
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
-   private CustomerMapper customerMapper;
+    private CustomerMapper customerMapper;
 
     @Override
     public Page<Customer> search(Integer pageNum) {
-        PageHelper.startPage(pageNum,10);
+        PageHelper.startPage(pageNum, 10);
         Page<Customer> page = customerMapper.search();
         return page;
     }
@@ -25,7 +25,6 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Customer getById(Integer customerId) {
         Customer customer = customerMapper.selectByPrimaryKey(customerId);
-
         return customer;
     }
 

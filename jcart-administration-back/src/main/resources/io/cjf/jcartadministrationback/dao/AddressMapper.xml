@@ -104,7 +104,7 @@
     where address_id = #{addressId,jdbcType=INTEGER}
   </update>
 
-<!--custom -->
+<!--  custom-->
   <select id="selectByCustomerId" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

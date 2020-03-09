@@ -24,14 +24,6 @@ public class AdministratorShowOutDTO {
         this.username = username;
     }
 
-    public String getRealName() {
-        return realName;
-    }
-
-    public void setRealName(String realName) {
-        this.realName = realName;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -54,5 +46,13 @@ public class AdministratorShowOutDTO {
 
     public void setStatus(Byte status) {
         this.status = status;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
     }
 }

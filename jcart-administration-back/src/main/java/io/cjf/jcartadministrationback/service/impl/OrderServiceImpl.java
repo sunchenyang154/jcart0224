@@ -31,8 +31,8 @@ public class OrderServiceImpl implements OrderService {
     private CustomerService customerService;
 
     @Override
-    public Page<OrderListOutDTO> search(Integer pagNum) {
-        PageHelper.startPage(pagNum,10);
+    public Page<OrderListOutDTO> search(Integer pageNum) {
+        PageHelper.startPage(pageNum, 10);
         Page<OrderListOutDTO> page = orderMapper.search();
         return page;
     }
@@ -65,5 +65,10 @@ public class OrderServiceImpl implements OrderService {
         orderShowOutDTO.setOrderProducts(orderProductVOS);
 
         return orderShowOutDTO;
+    }
+
+    @Override
+    public void update(Order order) {
+        orderMapper.updateByPrimaryKeySelective(order);
     }
 }

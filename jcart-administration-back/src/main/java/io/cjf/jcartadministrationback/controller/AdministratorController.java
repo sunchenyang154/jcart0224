@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/administrator")
+@CrossOrigin
 public class AdministratorController {
 
     @Autowired
@@ -87,7 +88,7 @@ public class AdministratorController {
     }
 
     @GetMapping("/getList")
-    public PageOutDTO<AdministratorListOutDTO> getList(@RequestParam(required = false,defaultValue = "1")  Integer pageNum){
+    public PageOutDTO<AdministratorListOutDTO> getList(@RequestParam(required = false, defaultValue = "1") Integer pageNum){
         Page<Administrator> page = administratorService.getList(pageNum);
         List<AdministratorListOutDTO> administratorListOutDTOS = page.stream().map(administrator -> {
             AdministratorListOutDTO administratorListOutDTO = new AdministratorListOutDTO();
@@ -150,7 +151,7 @@ public class AdministratorController {
         administrator.setStatus(administratorUpdateInDTO.getStatus());
         String password = administratorUpdateInDTO.getPassword();
         if (password != null && !password.isEmpty()){
-            String bcryptHashString = BCrypt.withDefaults().hashToString(12, administratorUpdateInDTO.getPassword().toCharArray());
+            String bcryptHashString = BCrypt.withDefaults().hashToString(12, password.toCharArray());
             administrator.setEncryptedPassword(bcryptHashString);
         }
         administratorService.update(administrator);
