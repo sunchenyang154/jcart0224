@@ -32,6 +32,7 @@ public class ProductController {
         pageOutDTO.setPageNum(page.getPageNum());
         pageOutDTO.setList(page);
 
+
         return pageOutDTO;
     }
 
