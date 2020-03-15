@@ -47,7 +47,7 @@ var app = new Vue({
         },
         searchReturn() {
             axios.get('/return/search', {
-                params: { 
+                params: {
                     returnId: this.returnId,
                     orderId: this.orderId,
                     customerName: this.customerName,

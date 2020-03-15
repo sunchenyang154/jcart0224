@@ -1,4 +1,4 @@
-Vue.component('jc-customer-search-page', {
+const CustomerSearchRoutePage = {
     template: `
     <div id="app">
 
@@ -39,6 +39,8 @@ Vue.component('jc-customer-search-page', {
             </el-table-column>
             <el-table-column label="操作">
                 <template slot-scope="scope">
+                    <el-button type="primary" size="mini" @click="handleShowClick(scope.$index, scope.row)">详情
+                    </el-button>
                     <el-button type="primary" size="mini" @click="handleUpdateStatus(scope.$index, scope.row)">更新状态
                     </el-button>
                 </template>
@@ -88,6 +90,9 @@ Vue.component('jc-customer-search-page', {
             this.pageNum = val;
             this.searchCustomer();
         },
+        handleShowClick(index, row) {
+            this.$router.push('/customer/show/' + row.customerId);
+        },
         handleUpdateStatus(index, row) {
             console.log('update status click');
             this.updateCustomerStatus(row.customerId, row.status);
@@ -125,4 +130,4 @@ Vue.component('jc-customer-search-page', {
                 });
         }
     }
-})
+}

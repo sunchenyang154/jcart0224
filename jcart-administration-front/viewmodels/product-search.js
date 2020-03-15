@@ -13,6 +13,7 @@ var app = new Vue({
             { value: 1, label: '上架' },
             { value: 2, label: '待审核' }
         ]
+
     },
     mounted() {
         console.log('view mounted');
@@ -24,6 +25,10 @@ var app = new Vue({
             this.pageNum = 1;
             this.searchProduct();
         },
+        handleEdit(index, row) {
+            console.log('product edit click', index, row);
+            location.href = 'product-update.html?productId=' + row.productId;
+        },
         handleClearClick() {
             console.log('clear click');
             this.productCode = '';
@@ -32,7 +37,7 @@ var app = new Vue({
             this.stockQuantity = '';
             this.selectedStatus = '';
         },
-        handlePageChange(val){
+        handlePageChange(val) {
             console.log('page change');
             this.pageNum = val;
             this.searchProduct();

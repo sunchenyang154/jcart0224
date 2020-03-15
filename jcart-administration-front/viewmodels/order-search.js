@@ -30,9 +30,9 @@ var app = new Vue({
         this.searchOrder();
     },
     methods: {
-        handleSearchClick(){
+        handleSearchClick() {
             console.log('search click');
-            this.pageNum= 1;
+            this.pageNum = 1;
             this.searchOrder();
         },
         handleClearClick() {
