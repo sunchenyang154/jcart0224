@@ -42,9 +42,15 @@ public class LoginFilter implements Filter {
 
         final String requestURI = request.getRequestURI();
 
-        if (excludeLoginApiUrls.contains(requestURI)) {
+        /*if (excludeLoginApiUrls.contains(requestURI)) {
             filterChain.doFilter(servletRequest, servletResponse);
             return;
+        }*/
+        for (String excludeLoginApiUrl : excludeLoginApiUrls) {
+            if (requestURI.endsWith(excludeLoginApiUrl)) {
+                filterChain.doFilter(servletRequest, servletResponse);
+                return;
+            }
         }
 
         String token = request.getHeader("jcartToken");
